@@ -1,0 +1,67 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/post_detail.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+{% endblock %}
+{%block content%}
+
+  <div class="content">
+    <div class="main-content">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <div class="post-content">
+          <p>{{post.content | safe}}</p>
+        </div>
+    </div>
+    
+    <div class="sidebar">
+      <h1>Son Postlar</h1>
+      <div class="popular">
+        {% for post in latest %}
+        {% if post.title != title %}
+        <div class="post clearfix">
+          <img src="{% static 'image/background.jpg'%}" alt="">
+          <a href="{% url 'post_detail' post.slug  %}"><h4>{{post.title}}</h4></a>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="comments">
+      {% if comments %}
+      <h1>Yorumlar</h1>
+      {% for comment in comments %}
+        <div class="single-comment">
+          <p class="comment-name">
+            {{ comment.name }}
+            <span class="date">
+              {{ comment.created_on }}
+            </span>
+          </p>
+          <p>{{ comment.body | linebreaks }}</p>
+        </div>
+      {% endfor %}
+      {% else %}
+        <h1>Yorumlar</h1>
+        <h5>Hiç yorum yok. İlk atan siz olun.</h1>
+      {% endif %}
+    </div>
+
+    <div class="comment-form">
+      {% if new_comment %}
+      <div class="alert alert-success" role="alert">
+        Your comment is awaiting moderation
+      </div>
+      {% else %}
+      <h5>Bir yorum bırakın</h5>
+      <form method="post" class="form_comment">
+        {{ comment_form | crispy }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+      </form>
+      {% endif %}
+    </div>
+  </div>
+{% endblock content %}

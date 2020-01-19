@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %} 
+{% load crispy_forms_tags %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/contact.css' %}">
+{% endblock %}
+{% block content %}
+  {% if new_contact %}
+  <div class="alert alert-success" role="alert">
+    Formunuz Bize Ulaşmıştır. En kısa sürede geri dönüş sağlanacaktır.
+  </div>
+  {% else %}
+  <div class="info">
+    <h3>Hello, fill the form. We will return as soon as possible.</h3>
+  </div>
+  <form method="post">
+    {% csrf_token %}
+    <input name="name" type="text" class="feedback-input" placeholder="Name" required="required"/>   
+    <input name="email" type="text" class="feedback-input" placeholder="Email" required="required"/>
+    <textarea name="body" class="feedback-input" placeholder="Message" required="required"></textarea>
+    <input type="submit" value="Submit" />
+  </form>
+  {% endif %}
+  
+    
+
+{%endblock%}

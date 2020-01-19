@@ -1,0 +1,67 @@
+{% extends "blog/base.html" %} 
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'blog/index.css' %}">
+{% endblock %}
+{%block content%}
+    
+    <div class="page-wrapper">
+        <div class="post-slider">
+            <h1 class="slider-title">Öne Çıkan Postlar</h1>
+            <i class="fa fa-chevron-left prev"></i>
+            <i class="fa fa-chevron-right next"></i>
+
+            <div class="post-wrapper">
+                {% for post in latest %}
+                
+                <div class="post">
+                    <img src="{{post.image.url}}" alt="" class="slider-image">
+                    <div class="post-info">
+                        <h4><a href="{% url 'post_detail' post.slug  %}">{{post.title}}</a></h4>
+                        <i class="fa fa-user">{{post.author}}</i>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="content">
+        <div class="main-content">
+            <h1 class="recent-post-title">Son Postlar</h1>
+            {% for post in post_list %}
+            <div class="post clearfix">
+                <img src="{{post.image.url}}" alt="" class="post-image">
+                <div class="post-preview">
+                    <h2><a href="{% url 'post_detail' post.slug  %}">{{post.title}}</a></h2>
+                    <i class="fa fa-user">{{post.author}}</i>
+                    &nbsp;
+                    <p class="preview-text">{{post.preview}}</p>
+                    <a href="{% url 'post_detail' post.slug  %}"class="btn read-more">Posta Geç &rarr;</a>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="pagination">
+
+                <ul class="pagination ">
+                    {% if post_list.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ post_list.previous_page_number }}">Önceki</a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="">Önceki</a></li>
+                    {% endif %}
+
+                    <li class="page-item active"><a class="page-link" href="">Sayfa {{ post_list.number }} of {{ post_list.paginator.num_pages }}</a></li>
+                    
+                    {% if post_list.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ post_list.next_page_number }}">Sonraki</a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="">Sonraki</a></li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+{%endblock%}

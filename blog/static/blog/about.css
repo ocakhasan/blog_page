@@ -1,0 +1,96 @@
+
+.all{
+    background-color: aliceblue;
+}
+
+.about{
+    width: 90%;
+    margin: 30px auto 30px;
+}
+
+.about .image{
+    padding: 20px 50px;
+    float: left;
+    width: 40%;
+}
+
+.about .image .man{
+    width: 100%;
+    height: auto;
+}
+
+.about .writing{
+    width: 50%;
+    margin-top: 8%;
+    float:left;
+    margin-left: 30px;
+}
+.about .writing h3{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.about .about-link li{
+    display: inline-block;
+}
+
+.about .writing .about-link li a i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #006669;
+    margin-right: 10px;
+    font-size: 22px;
+    color: #006669;
+    transition: all .3s;
+}
+
+.about .writing .about-link li a i:hover{
+    color: white;
+    background: #006669;
+    border-color: #006669;
+    
+}
+
+.color-3{
+    color: #006669;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-white{
+    color: white;
+}
+
+p{
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006669;
+    font-weight: bold;
+}
+
+.btn-danger{
+    border-radius: 0;
+    padding: 10px 20px;
+}
+
+@media only screen and (max-width: 600px){
+    .about .image{
+        width: 100%;
+        padding: 0px 0px;
+    }
+    
+    
+
+    .about .writing{
+        width: 90%;
+        margin-top:20px;
+        float:left;
+        margin-left: 0px;
+    }
+}

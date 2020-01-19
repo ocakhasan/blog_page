@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %} 
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/about.css' %}">
+{% endblock %}
+{%block content%}
+
+  
+    <div class="about">
+        <div class="image">
+            <img class= "man" src="{%static 'image/background.jpg'%}" alt="profile">
+        </div>
+        <div class="writing">
+          <h2 class="color-3">
+            <b>Hakkımda</b>
+          </h2>
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, odio!</h3>
+          <p class="p-first text-black">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti est repellendus quis impedit eveniet reiciendis atque architecto illo necessitatibus placeat!
+          </p>
+          <p class="text-black">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, quaerat? Porro minima iure, natus officiis quaerat quam nostrum eius maxime. 
+          </p>
+          <br></br>
+          <ul class="about-link">
+            <li><a href="https://github.com/ocakhasan" target="_blank"><i class = "fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/hasan-ocak-804654151/" target="_blank"><i class = "fa fa-linkedin"></i></a></li>
+          </ul>
+
+          
+
+        </div>
+    </div>
+
+{%endblock%}

@@ -1,0 +1,21 @@
+.all{
+    background-color: lightblue;
+}
+
+
+.navbar{
+    background-color: #006669;
+}
+
+
+.navbar .container-fluid .collapse .nav-item .nav-link {
+    color: white;
+}
+
+.navbar .container-fluid .navbar-brand{
+    color:white;
+}
+
+.navbar-toggler-icon{
+    color:white;
+}

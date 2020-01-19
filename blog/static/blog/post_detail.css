@@ -1,0 +1,140 @@
+.content{
+    width: 90%;
+    margin: 30px auto 30px;
+}
+
+
+.content .main-content{
+    padding: 20px 50px;
+    font-size: 1.1em;
+    background:  aliceblue;
+    float: left;
+    width: 70%;
+    height:100%;
+    border-radius: 5px;
+}
+
+.content .main-content .post-title{
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.content .sidebar{
+    width: 29%;
+    float: right;
+    float:left;
+    background: aliceblue;
+    border-radius: 10px;
+    margin-left: 10px;
+
+}
+.content .sidebar h1{
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+}
+
+.content .sidebar h4{
+    font-family: 'Fira Code', monospace;
+}
+
+.content .sidebar .popular .post{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid grey;
+}
+
+.content .sidebar .popular .post img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.content .comments{
+    width: 29%;
+    float:left;
+    margin-left: 10px;
+    background:aliceblue;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.content .comment-form{
+    width: 55%;
+    float:left;
+    background:aliceblue;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.content .comments h1,h5{
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+}
+
+.content .comment-form .form_comment{
+    margin : 10px;
+}
+
+.content .comment-form h5{
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content .comments .single-comment{
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    .content{
+        padding:10px;
+    }
+
+    .content .post-image{
+        width:100%;
+    }
+
+    .content .main-content{
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .content .sidebar{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .content .comments{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .content .comments .single-comment{
+        width: 100%;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+
+    .content .comment-form{
+        width: 100%;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,219 @@
+
+.content a:hover{
+    color:#006669;
+}
+
+.content .main-content .pagination{
+    width: 70%;
+}
+
+.content .main-content .pagination .pagination{
+    position: relative;
+    left:50%;
+}
+
+.page-wrapper a:hover{
+    color:#006669;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.post-slider{
+    position: relative;
+}
+
+.post-slider .slider-title{
+    text-align: center;
+    margin: 30px auto;
+
+}
+
+.post-slider .next{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    color : #006669;
+    cursor: pointer;
+}
+
+
+.post-slider .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color : #006669;
+    cursor: pointer;
+
+}
+.post-slider .post-wrapper{
+    width: 84%;
+    height: 350px;
+    overflow: hidden;
+    margin: 0px auto;
+    padding: 10px 0px 10px 0px;
+}
+
+.post-slider .post-wrapper .post{
+    background: #fdfdfd;
+    display: inline-block;
+    width: 300px;
+    height: 330px;
+    margin: 0px 10px;
+    border-radius: 5px;
+}
+
+
+
+.post-slider .post-wrapper .post .post-info{
+    height: 130px;
+    padding: 0px 5px;
+}
+.post-slider .post-wrapper .post .slider-image{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem black;
+}
+
+
+.content{
+    width: 90%;
+    margin: 30px auto 30px;
+}
+.main-content{
+    width: 70%;
+    float: left;
+}
+
+.content .sidebar{
+    width: 30%;
+    float: left;
+    height: 300px;
+}
+.content .main-content .recent-post-title{
+    margin: 20px;
+}
+
+
+.content .main-content .post{
+    width: 95%;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: #fdfdfd;
+    position: relative;
+}
+
+
+.content .main-content .post .clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.content .main-content .post .read-more{
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+    border:1px solid #006669;
+    background: transparent;
+    border-radius: 5px;
+    color: #006669 !important;
+}
+
+.content .main-content .post .read-more:hover{
+    background-color: #006669;
+    color:white !important;
+    transition: .25s;
+}
+.content .main-content .post .post-image{
+    width: 30%;
+    height: 100%;
+    float: left;
+    border-radius: 3px;
+
+}
+.content .main-content .post .post-preview{
+    width: 70%;
+    padding: 10px;
+    float:right;
+}
+
+.content .main-content .post .post-preview .preview-text{
+    padding-top: 10px;
+}
+
+.btn{
+    padding: .5rem 1rem;
+    background: #006669;
+    color:white;
+    border:1px solid transparent;
+    border-radius: .25rem;
+}
+
+@media only screen and (max-width: 934px){
+    .content{
+        width: 100%;
+    }
+
+
+    .content .main-content .post{
+        width: 100%;
+    }
+    .main-content{
+        width: 100%;
+        float: left;
+        padding: 10px;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 600px){
+    
+    
+    .content .main-content .post{
+        height: auto;
+    }
+    .content .main-content .post .post-image{
+        width: 100%;
+        border: 1px solid blue;
+    
+    }
+    .content .main-content .post .post-preview{
+        width: 100%;
+
+    }
+
+    .content .main-content .post .read-more{
+        position: static;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .post-slider .next{
+        right: 10px;
+    }
+    
+    
+    .post-slider .prev{
+        left: 10px;
+    }
+
+    .content .main-content .pagination{
+        width: 100%;
+    }
+
+    .content .main-content .pagination .pagination{
+        left:15%;
+    }
+}
