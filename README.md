@@ -9,6 +9,7 @@ To use the project
 
 ```bash
 git clone https://github.com/ocakhasan/blog_page.git
+cd blog_page
 ```
 After that make the migrations and create a superuser
 
@@ -21,7 +22,7 @@ python manage.py createsuperuser
 After that you can simply run the server and access the application.
 
 # Türkçe Açıklama
-![ss](screenshots/first.png)
+
 
 Bu Python Django ile yapılmış basit bir blog sayfası örnegidir. Buradaki temel yapı ve modeller bu siteden [Django Central](https://djangocentral.com/building-a-blog-application-with-django/) alınmıştır. Bazı Html ve Css kodları da [Ava Melvine](https://www.youtube.com/channel/UCjOVC0tPIo78a_DNeYs7ETQ) buradan alınmıştır
 
@@ -29,6 +30,7 @@ Projeyi kullanmak için
 
 ```bash
 git clone https://github.com/ocakhasan/blog_page.git
+cd blog_page
 ```
 Migrationları yapın ve superuser yaratın
 
