@@ -16,7 +16,7 @@
     </div>
     
     <div class="sidebar">
-      <h1>Son Postlar</h1>
+      <h1>Latest Posts</h1>
       <div class="popular">
         {% for post in latest %}
         {% if post.title != title %}
@@ -31,7 +31,7 @@
 
     <div class="comments">
       {% if comments %}
-      <h1>Yorumlar</h1>
+      <h1>Comments</h1>
       {% for comment in comments %}
         <div class="single-comment">
           <p class="comment-name">
@@ -44,8 +44,8 @@
         </div>
       {% endfor %}
       {% else %}
-        <h1>Yorumlar</h1>
-        <h5>Hiç yorum yok. İlk atan siz olun.</h1>
+        <h1>Comments</h1>
+        <h5>There is no comment. Be the first one</h1>
       {% endif %}
     </div>
 
@@ -55,7 +55,7 @@
         Your comment is awaiting moderation
       </div>
       {% else %}
-      <h5>Bir yorum bırakın</h5>
+      <h5>Leave a comment</h5>
       <form method="post" class="form_comment">
         {{ comment_form | crispy }}
         {% csrf_token %}
